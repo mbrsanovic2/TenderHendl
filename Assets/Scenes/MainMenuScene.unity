@@ -266,6 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 342953297}
+  - component: {fileID: 342953298}
   m_Layer: 0
   m_Name: DifficultyButtons
   m_TagString: Untagged
@@ -286,11 +287,23 @@ Transform:
   m_LocalScale: {x: 12.591128, y: 11.82956, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1891793477}
-  - {fileID: 396690921}
   - {fileID: 348844739}
+  - {fileID: 396690921}
+  - {fileID: 1891793477}
   m_Father: {fileID: 960277185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342953298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342953296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520cf14538953514ab65fa0de4aabb62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &348844738
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +386,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 348844741}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 342953298}
+        m_TargetAssemblyTypeName: ChooseDifficultyScript, Assembly-CSharp
+        m_MethodName: SetDifficulty
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &348844741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,7 +519,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 396690923}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 342953298}
+        m_TargetAssemblyTypeName: ChooseDifficultyScript, Assembly-CSharp
+        m_MethodName: SetDifficulty
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &396690923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,7 +1557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1891793479}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 342953298}
+        m_TargetAssemblyTypeName: ChooseDifficultyScript, Assembly-CSharp
+        m_MethodName: SetDifficulty
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1891793479
 MonoBehaviour:
   m_ObjectHideFlags: 0
