@@ -8,19 +8,21 @@ public class SpawnHendl : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ShootAtPlayerRoutine());
+
+        int difficulty = ChooseDifficultyScript.difficulty;
+        StartCoroutine(ShootAtPlayerRoutine(difficulty));
     }
 
-    IEnumerator ShootAtPlayerRoutine()
+    IEnumerator ShootAtPlayerRoutine(int difficulty)
     {
         while (true)
         {
-            ShootAtPlayer();
-            yield return new WaitForSeconds(3f);
+            ShootAtPlayer(difficulty);
+            yield return new WaitForSeconds(3/(float)difficulty);
         }
     }
 
-    void ShootAtPlayer()
+    void ShootAtPlayer(float velocity)
     {
         if (player == null || projectile == null) return;
 
@@ -33,7 +35,7 @@ public class SpawnHendl : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * 10f;
+            rb.linearVelocity = direction * 10f*velocity;
         }
     }
 }
