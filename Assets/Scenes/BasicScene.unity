@@ -728,6 +728,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: tennis court
       objectReference: {fileID: 0}
+    - target: {fileID: 2541387709668086212, guid: 0b7a427e06884ee459b31b7dc6a326af, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ea7cb2b400d8e34cbfee69643d604f9, type: 2}
+    - target: {fileID: 5986674197537122165, guid: 0b7a427e06884ee459b31b7dc6a326af, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c2a001bc2b4c92449cb3a09df64b3da, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
