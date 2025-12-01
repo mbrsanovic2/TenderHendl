@@ -5,10 +5,10 @@ public class SpawnHendl : MonoBehaviour
 {
     public GameObject player;
     public GameObject projectile;
+    [SerializeField] private Scoretafel scoreboard;
 
     void Start()
     {
-
         int difficulty = ChooseDifficultyScript.difficulty;
         StartCoroutine(ShootAtPlayerRoutine(difficulty));
     }
@@ -28,6 +28,7 @@ public class SpawnHendl : MonoBehaviour
 
         // Spawn projectile
         GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
+        scoreboard.IncreaseBalls();
 
         // Calculate direction
         Vector3 direction = (player.transform.position - transform.position).normalized;
@@ -35,7 +36,7 @@ public class SpawnHendl : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * 10f*velocity;
+            rb.linearVelocity = direction * 10f * velocity;
         }
     }
 }
