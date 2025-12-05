@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ea47c1940c80b2448b70d0c0764d1c69
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302690
+  packageName: Capybara - Animated - Lowpoly
+  packageVersion: 1.0
+  assetPath: Assets/Capybara/Animations/AnimatorController_Demo/run.controller
+  uploadId: 708821

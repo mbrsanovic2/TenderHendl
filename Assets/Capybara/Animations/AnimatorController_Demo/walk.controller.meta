@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 745454ae217e54e4199f9f7b5de3d113
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302690
+  packageName: Capybara - Animated - Lowpoly
+  packageVersion: 1.0
+  assetPath: Assets/Capybara/Animations/AnimatorController_Demo/walk.controller
+  uploadId: 708821

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4afcaa6d6669c6a4abb7b07d28e8afd2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302690
+  packageName: Capybara - Animated - Lowpoly
+  packageVersion: 1.0
+  assetPath: Assets/Capybara/Animations/AnimatorController_Demo/idle_looking.controller
+  uploadId: 708821

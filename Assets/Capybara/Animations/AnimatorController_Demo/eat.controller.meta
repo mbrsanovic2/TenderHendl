@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 67356c4ca22dea04ea9b5ec3de8b59d5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302690
+  packageName: Capybara - Animated - Lowpoly
+  packageVersion: 1.0
+  assetPath: Assets/Capybara/Animations/AnimatorController_Demo/eat.controller
+  uploadId: 708821
