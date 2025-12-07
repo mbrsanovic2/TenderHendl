@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class SpawnHendl : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject projectile;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject projectile;
+    [SerializeField] GameObject hendl;
     [SerializeField] private Scoretafel scoreboard;
+    [SerializeField] private Transform spawnpoint;
 
     void Start()
     {
@@ -15,6 +17,8 @@ public class SpawnHendl : MonoBehaviour
 
     IEnumerator ShootAtPlayerRoutine(int difficulty)
     {
+        if (difficulty == 0)
+            difficulty = 1;
         while (true)
         {
             ShootAtPlayer(difficulty);
@@ -27,7 +31,15 @@ public class SpawnHendl : MonoBehaviour
         if (player == null || projectile == null) return;
 
         // Spawn projectile
-        GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity);
+        GameObject bullet;
+        if (Random.Range(0, 100) < 5)
+        {
+            bullet = Instantiate(hendl, spawnpoint.position, Quaternion.identity);
+        }
+        else
+        {
+            bullet = Instantiate(projectile, spawnpoint.position, Quaternion.identity);
+        }
         scoreboard.IncreaseBalls();
 
         // Calculate direction
