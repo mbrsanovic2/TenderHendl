@@ -8,6 +8,7 @@ public class SpawnHendl : MonoBehaviour
     [SerializeField] GameObject hendl;
     [SerializeField] private Scoretafel scoreboard;
     [SerializeField] private Transform spawnpoint;
+    [SerializeField] AudioSource shootSound;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class SpawnHendl : MonoBehaviour
 
     IEnumerator ShootAtPlayerRoutine(int difficulty)
     {
+        yield return new WaitForSeconds(5);
         if (difficulty == 0)
             difficulty = 1;
         while (true)
@@ -30,6 +32,7 @@ public class SpawnHendl : MonoBehaviour
     {
         if (player == null || projectile == null) return;
 
+        shootSound.Play();
         // Spawn projectile
         GameObject bullet;
         if (Random.Range(0, 100) < 5)
