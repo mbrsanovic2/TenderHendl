@@ -35,7 +35,7 @@ public class SpawnHendl : MonoBehaviour
         shootSound.Play();
         // Spawn projectile
         GameObject bullet;
-        if (Random.Range(0, 100) < 25)
+        if (Random.Range(0, 100) < 20)
         {
             bullet = Instantiate(hendl, spawnpoint.position, Quaternion.identity);
         }
@@ -51,7 +51,7 @@ public class SpawnHendl : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * 10f * velocity;
+            rb.linearVelocity = direction * 10f * velocity + new Vector3(0,6);
         }
     }
 }
