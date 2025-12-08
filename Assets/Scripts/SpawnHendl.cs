@@ -35,7 +35,7 @@ public class SpawnHendl : MonoBehaviour
         shootSound.Play();
         // Spawn projectile
         GameObject bullet;
-        if (Random.Range(0, 100) < 5)
+        if (Random.Range(0, 100) < 25)
         {
             bullet = Instantiate(hendl, spawnpoint.position, Quaternion.identity);
         }
