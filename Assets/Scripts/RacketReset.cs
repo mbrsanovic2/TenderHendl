@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RacketReset : MonoBehaviour
 {
-    Vector3 RESETPOS = new Vector3(0,2,0);
+    Vector3 RESETPOS = new Vector3(0, 2, 0);
 
     private void OnTriggerExit(Collider other)
     {

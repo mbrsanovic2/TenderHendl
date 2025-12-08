@@ -24,7 +24,7 @@ public class SpawnHendl : MonoBehaviour
         while (true)
         {
             ShootAtPlayer(difficulty);
-            yield return new WaitForSeconds(3/(float)difficulty);
+            yield return new WaitForSeconds(3 / (float)difficulty);
         }
     }
 
