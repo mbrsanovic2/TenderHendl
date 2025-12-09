@@ -6,8 +6,13 @@ public class Scoretafel : MonoBehaviour
 {
     [SerializeField] private TMP_Text score;
     [SerializeField] private TMP_Text hitQuote;
+    [SerializeField] private GameObject tutorial;
     private float scoreAmount = 0;
     private float totalBalls = 0;
+
+    private void Start()
+    {
+    }
     public void OnBackToMenu()
     {
         SceneManager.LoadScene(0);
@@ -16,6 +21,7 @@ public class Scoretafel : MonoBehaviour
     public void IncreaseScore()
     {
         scoreAmount++;
+        tutorial.SetActive(false);
         UpdateText();
     }
 

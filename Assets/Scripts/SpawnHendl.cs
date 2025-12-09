@@ -13,7 +13,7 @@ public class SpawnHendl : MonoBehaviour
     void Start()
     {
         int difficulty = ChooseDifficultyScript.difficulty;
-        StartCoroutine(ShootAtPlayerRoutine(difficulty));
+        StartCoroutine(ShootAtPlayerRoutine(3));
     }
 
     IEnumerator ShootAtPlayerRoutine(int difficulty)
@@ -48,10 +48,15 @@ public class SpawnHendl : MonoBehaviour
         // Calculate direction
         Vector3 direction = (player.transform.position - transform.position).normalized;
 
+        float spread = 0.024f * velocity;
+        float xOffset = Random.Range(-spread, spread);
+
+        direction = new Vector3(direction.x + xOffset, direction.y, direction.z).normalized;
+
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * 10f * velocity + new Vector3(0,6);
+            rb.linearVelocity = direction * 10f * velocity + new Vector3(0, 6);
         }
     }
 }
