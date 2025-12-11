@@ -10,4 +10,8 @@ public class ChooseDifficultyScript : MonoBehaviour
         ChooseDifficultyScript.difficulty = difficulty;
         SceneManager.LoadScene(1);
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
