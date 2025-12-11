@@ -13,7 +13,7 @@ public class SpawnHendl : MonoBehaviour
     void Start()
     {
         int difficulty = ChooseDifficultyScript.difficulty;
-        StartCoroutine(ShootAtPlayerRoutine(3));
+        StartCoroutine(ShootAtPlayerRoutine(difficulty));
     }
 
     IEnumerator ShootAtPlayerRoutine(int difficulty)
@@ -48,7 +48,7 @@ public class SpawnHendl : MonoBehaviour
         // Calculate direction
         Vector3 direction = (player.transform.position - transform.position).normalized;
 
-        float spread = 0.024f * velocity;
+        float spread = 0.03f * (velocity -1);
         float xOffset = Random.Range(-spread, spread);
 
         direction = new Vector3(direction.x + xOffset, direction.y, direction.z).normalized;

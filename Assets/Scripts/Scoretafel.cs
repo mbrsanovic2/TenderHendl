@@ -7,6 +7,7 @@ public class Scoretafel : MonoBehaviour
     [SerializeField] private TMP_Text score;
     [SerializeField] private TMP_Text hitQuote;
     [SerializeField] private GameObject tutorial;
+    [SerializeField] private AudioSource audio;
     private float scoreAmount = 0;
     private float totalBalls = 0;
 
@@ -21,6 +22,7 @@ public class Scoretafel : MonoBehaviour
     public void IncreaseScore()
     {
         scoreAmount++;
+        audio.Play();
         tutorial.SetActive(false);
         UpdateText();
     }
