@@ -5044,7 +5044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 3576778662303296645}
-  particleSystem: {fileID: 1096253411263766809}
+  currentParticleSystem: {fileID: 1096253411263766809}
 --- !u!82 &3576778662303296645
 AudioSource:
   m_ObjectHideFlags: 0

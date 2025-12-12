@@ -9,6 +9,7 @@ public class SpawnHendl : MonoBehaviour
     [SerializeField] private Scoretafel scoreboard;
     [SerializeField] private Transform spawnpoint;
     [SerializeField] AudioSource shootSound;
+    private int noChicken = 0;
 
     void Start()
     {
@@ -35,12 +36,14 @@ public class SpawnHendl : MonoBehaviour
         shootSound.Play();
         // Spawn projectile
         GameObject bullet;
-        if (Random.Range(0, 100) < 20)
+        if (Random.Range(0, 100) < 25 || noChicken > 3)
         {
             bullet = Instantiate(hendl, spawnpoint.position, Quaternion.identity);
+            noChicken = 0;
         }
         else
         {
+            noChicken++;
             bullet = Instantiate(projectile, spawnpoint.position, Quaternion.identity);
         }
         scoreboard.IncreaseBalls();

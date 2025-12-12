@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: -1503183418414352205}
-  particleSystem: {fileID: 7703672103473486861}
+  currentParticleSystem: {fileID: 7703672103473486861}
 --- !u!1 &8122850409471221505
 GameObject:
   m_ObjectHideFlags: 0
