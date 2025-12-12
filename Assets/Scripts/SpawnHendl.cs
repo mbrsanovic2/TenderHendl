@@ -59,7 +59,7 @@ public class SpawnHendl : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * 10f * velocity + new Vector3(0, 6);
+            rb.linearVelocity = direction * 9f * velocity + new Vector3(0, 6);
         }
     }
 }
